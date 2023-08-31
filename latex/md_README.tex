@@ -1,0 +1,701 @@
+Copyright (c) 2014-\/2022 The Monero Project. ~\newline
+ Portions Copyright (c) 2012-\/2013 The Cryptonote developers.\hypertarget{md_README_autotoc_md1}{}\doxysection{Table of Contents}\label{md_README_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{\#development-resources}{\texttt{ Development resources}}
+\item \href{\#vulnerability-response}{\texttt{ Vulnerability response}}
+\item \href{\#research}{\texttt{ Research}}
+\item \href{\#announcements}{\texttt{ Announcements}}
+\item \href{\#translations}{\texttt{ Translations}}
+\item \href{\#coverage}{\texttt{ Coverage}}
+\item \href{\#introduction}{\texttt{ Introduction}}
+\item \href{\#about-this-project}{\texttt{ About this project}}
+\item \href{\#supporting-the-project}{\texttt{ Supporting the project}}
+\item \href{\#license}{\texttt{ License}}
+\item \href{\#contributing}{\texttt{ Contributing}}
+\item \href{\#scheduled-software-upgrades}{\texttt{ Scheduled software upgrades}}
+\item \href{\#release-staging-schedule-and-protocol}{\texttt{ Release staging schedule and protocol}}
+\item \href{\#compiling-monero-from-source}{\texttt{ Compiling Monero from source}}
+\begin{DoxyItemize}
+\item \href{\#dependencies}{\texttt{ Dependencies}}
+\end{DoxyItemize}
+\item \href{\#Internationalization}{\texttt{ Internationalization}}
+\item \href{\#using-tor}{\texttt{ Using Tor}}
+\item \href{\#Pruning}{\texttt{ Pruning}}
+\item \href{\#Debugging}{\texttt{ Debugging}}
+\item \href{\#known-issues}{\texttt{ Known issues}}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{Development resources}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Web\+: \href{https://getmonero.org}{\texttt{ getmonero.\+org}}
+\item Forum\+: \href{https://forum.getmonero.org}{\texttt{ forum.\+getmonero.\+org}}
+\item Mail\+: \href{mailto:dev@getmonero.org}{\texttt{ dev@getmonero.\+org}}
+\item Git\+Hub\+: \href{https://github.com/monero-project/monero}{\texttt{ https\+://github.\+com/monero-\/project/monero}}
+\item IRC\+: \href{https://web.libera.chat/\#monero-dev}{\texttt{ \#monero-\/dev on Libera}}
+\item It is HIGHLY recommended that you join the \#monero-\/dev IRC channel if you are developing software that uses Monero. Due to the nature of this open source software project, joining this channel and idling is the best way to stay updated on best practices and new developments in the Monero ecosystem. All you need to do is join the IRC channel and idle to stay updated with the latest in Monero development. If you do not, you risk wasting resources on developing integrations that are not compatible with the Monero network. The Monero core team and community continuously make efforts to communicate updates, developments, and documentation via other platforms – but for the best information, you need to talk to other Monero developers, and they are on IRC. \#monero-\/dev is about Monero development, not getting help about using Monero, or help about development of other software, including yours, unless it also pertains to Monero code itself. For these cases, checkout \#monero.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{Vulnerability response}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Our \href{https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md}{\texttt{ Vulnerability Response Process}} encourages responsible disclosure
+\item We are also available via \href{https://hackerone.com/monero}{\texttt{ Hacker\+One}}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysection{Research}\label{md_README_autotoc_md4}
+The \href{https://src.getmonero.org/resources/research-lab/}{\texttt{ Monero Research Lab}} is an open forum where the community coordinates research into Monero cryptography, protocols, fungibility, analysis, and more. We welcome collaboration and contributions from outside researchers! Because not all Lab work and publications are distributed as traditional preprints or articles, they may be easy to miss if you are conducting literature reviews for your own Monero research. You are encouraged to get in touch with the Monero research community if you have questions, wish to collaborate, or would like guidance to help avoid unnecessarily duplicating earlier or known work.
+
+The Monero research community is available on IRC in \href{https://web.libera.chat/\#monero-research-lab}{\texttt{ \#monero-\/research-\/lab on Libera}}, which is also accessible via Matrix.\hypertarget{md_README_autotoc_md5}{}\doxysection{Announcements}\label{md_README_autotoc_md5}
+
+\begin{DoxyItemize}
+\item You can subscribe to an \href{https://lists.getmonero.org}{\texttt{ announcement listserv}} to get critical announcements from the Monero core team. The announcement list can be very helpful for knowing when software updates are needed.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md6}{}\doxysection{Translations}\label{md_README_autotoc_md6}
+The CLI wallet is available in different languages. If you want to help translate it, see our self-\/hosted localization platform, Weblate, on \href{https://translate.getmonero.org/projects/monero/cli-wallet/}{\texttt{ translate.\+getmonero.\+org}}. Every translation {\itshape must} be uploaded on the platform, pull requests directly editing the code in this repository will be closed. If you need help with Weblate, you can find a guide with screenshots \href{https://github.com/monero-ecosystem/monero-translations/blob/master/weblate.md}{\texttt{ here}}. ~
+
+If you need help/support/info about translations, contact the localization workgroup. You can find the complete list of contacts on the repository of the workgroup\+: \href{https://github.com/monero-ecosystem/monero-translations\#contacts}{\texttt{ monero-\/translations}}.\hypertarget{md_README_autotoc_md7}{}\doxysection{Coverage}\label{md_README_autotoc_md7}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Status    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Status    }\\\cline{1-2}
+\endhead
+Coverity   &\href{https://scan.coverity.com/projects/9657/}{\texttt{ }}    \\\cline{1-2}
+OSS Fuzz   &\href{https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:monero}{\texttt{ }}    \\\cline{1-2}
+Coveralls   &\href{https://coveralls.io/github/monero-project/monero?branch=master}{\texttt{ }}    \\\cline{1-2}
+License   &\href{https://opensource.org/licenses/BSD-3-Clause}{\texttt{ }}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md8}{}\doxysection{Introduction}\label{md_README_autotoc_md8}
+Monero is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+
+{\bfseries{Privacy\+:}} Monero uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain private by default.
+
+{\bfseries{Security\+:}} Using the power of a distributed peer-\/to-\/peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25-\/word mnemonic seed that is only displayed once and can be written down to backup the wallet. Wallet files should be encrypted with a strong passphrase to ensure they are useless if ever stolen.
+
+{\bfseries{Untraceability\+:}} By taking advantage of ring signatures, a special property of a certain type of cryptography, Monero is able to ensure that transactions are not only untraceable but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+
+{\bfseries{Decentralization\+:}} The utility of Monero depends on its decentralised peer-\/to-\/peer consensus network -\/ anyone should be able to run the monero software, validate the integrity of the blockchain, and participate in all aspects of the monero network using consumer-\/grade commodity hardware. Decentralization of the monero network is maintained by software development that minimizes the costs of running the monero software and inhibits the proliferation of specialized, non-\/commodity hardware.\hypertarget{md_README_autotoc_md9}{}\doxysection{About this project}\label{md_README_autotoc_md9}
+This is the core implementation of Monero. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Monero that uses the protocol and network in a compatible manner.
+
+As with many development projects, the repository on Git\+Hub is considered to be the \char`\"{}staging\char`\"{} area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-\/stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
+
+{\bfseries{Anyone is welcome to contribute to Monero\textquotesingle{}s codebase!}} If you have a fix or code change, feel free to submit it as a pull request directly to the \char`\"{}master\char`\"{} branch. In cases where the change is relatively small or does not affect other parts of the codebase, it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.\hypertarget{md_README_autotoc_md10}{}\doxysection{Supporting the project}\label{md_README_autotoc_md10}
+Monero is a 100\% community-\/sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both Monero and Bitcoin donations can be made to {\bfseries{donate.\+getmonero.\+org}} if using a client that supports the \href{https://openalias.org}{\texttt{ Open\+Alias}} standard. Alternatively, you can send XMR to the Monero donation address via the {\ttfamily donate} command (type {\ttfamily help} in the command-\/line wallet for details).
+
+The Monero donation address is\+: ~\newline
+ {\ttfamily 888t\+Nk\+Zr\+PN6\+Js\+Egekj\+Mn\+ABU4\+TBzc2\+Dt29\+EPAvk\+Rxb\+ANs\+Anjy\+Pbb3i\+Q1\+YBRk1\+UXcd\+Rsi\+Kc9dhw\+MVg\+N5\+S9c\+QUiyoog\+Davup3H} ~\newline
+ Viewkey\+: ~\newline
+ {\ttfamily f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501} ~\newline
+ Base address for restoring with address and viewkey\+: {\ttfamily 44AFFq5k\+Si\+GBo\+Z4\+NMDw\+Yt\+N18obc8\+Aem\+S33\+DBLWs3\+H7ot\+Xft3\+Xjrp\+Dt\+QGv7\+Sq\+Ssa\+BYBb98u\+Nbr2\+VBBEt7f2wfn3\+RVGQBEP3A} ~\newline
+
+
+The Bitcoin donation address is\+: ~\newline
+ {\ttfamily 1KTexdem\+Pdx\+SBc\+G55he\+Uu\+Tj\+DRYqb\+C5\+ZL8H}
+
+Core development funding and/or some supporting services are also graciously provided by \href{https://www.getmonero.org/community/sponsorships/}{\texttt{ sponsors}}\+:
+
+\href{https://tarilabs.com/}{\texttt{ }} \href{https://globee.com/}{\texttt{ }} \href{https://symas.com/}{\texttt{ }} \href{http://www.forked.net/}{\texttt{ }} \href{https://www.macstadium.com/}{\texttt{ }}
+
+There are also several mining pools that kindly donate a portion of their fees, \href{https://bitcointalk.org/index.php?topic=583449.0}{\texttt{ a list of them can be found on our Bitcointalk post}}.\hypertarget{md_README_autotoc_md11}{}\doxysection{License}\label{md_README_autotoc_md11}
+See \mbox{[}LICENSE\mbox{]}(LICENSE).\hypertarget{md_README_autotoc_md12}{}\doxysection{Contributing}\label{md_README_autotoc_md12}
+If you want to help out, see CONTRIBUTING for a set of guidelines.\hypertarget{md_README_autotoc_md13}{}\doxysection{Scheduled software upgrades}\label{md_README_autotoc_md13}
+Monero uses a fixed-\/schedule software upgrade (hard fork) mechanism to implement new features. This means that users of Monero (end users and service providers) should run current versions and upgrade their software on a regular schedule. Software upgrades occur during the months of April and October. The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Monero software version. Below is the historical schedule and the projected schedule for the next upgrade. Dates are provided in the format YYYY-\/\+MM-\/\+DD.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Software upgrade block height   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Date   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Fork version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Minimum Monero version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Recommended Monero version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Details    }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Software upgrade block height   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Date   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Fork version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Minimum Monero version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Recommended Monero version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Details    }\\\cline{1-6}
+\endhead
+1009827   &2016-\/03-\/22   &v2   &v0.\+9.\+4   &v0.\+9.\+4   &Allow only $>$= ringsize 3, blocktime = 120 seconds, fee-\/free blocksize 60 kb    \\\cline{1-6}
+1141317   &2016-\/09-\/21   &v3   &v0.\+9.\+4   &v0.\+10.\+0   &Splits coinbase into denominations    \\\cline{1-6}
+1220516   &2017-\/01-\/05   &v4   &v0.\+10.\+1   &v0.\+10.\+2.\+1   &Allow normal and Ring\+CT transactions    \\\cline{1-6}
+1288616   &2017-\/04-\/15   &v5   &v0.\+10.\+3.\+0   &v0.\+10.\+3.\+1   &Adjusted minimum blocksize and fee algorithm    \\\cline{1-6}
+1400000   &2017-\/09-\/16   &v6   &v0.\+11.\+0.\+0   &v0.\+11.\+0.\+0   &Allow only Ring\+CT transactions, allow only $>$= ringsize 5    \\\cline{1-6}
+1546000   &2018-\/04-\/06   &v7   &v0.\+12.\+0.\+0   &v0.\+12.\+3.\+0   &Cryptonight variant 1, ringsize $>$= 7, sorted inputs    \\\cline{1-6}
+1685555   &2018-\/10-\/18   &v8   &v0.\+13.\+0.\+0   &v0.\+13.\+0.\+4   &max transaction size at half the penalty free block size, bulletproofs enabled, cryptonight variant 2, fixed ringsize \href{https://youtu.be/KOO5S4vxi0o}{\texttt{ 11}}    \\\cline{1-6}
+1686275   &2018-\/10-\/19   &v9   &v0.\+13.\+0.\+0   &v0.\+13.\+0.\+4   &bulletproofs required    \\\cline{1-6}
+1788000   &2019-\/03-\/09   &v10   &v0.\+14.\+0.\+0   &v0.\+14.\+1.\+2   &New PoW based on Cryptonight-\/R, new block weight algorithm, slightly more efficient Ring\+CT format    \\\cline{1-6}
+1788720   &2019-\/03-\/10   &v11   &v0.\+14.\+0.\+0   &v0.\+14.\+1.\+2   &forbid old Ring\+CT transaction format    \\\cline{1-6}
+1978433   &2019-\/11-\/30   &v12   &v0.\+15.\+0.\+0   &v0.\+16.\+0.\+0   &New PoW based on RandomX, only allow $>$= 2 outputs, change to the block median used to calculate penalty, v1 coinbases are forbidden, rct sigs in coinbase forbidden, 10 block lock time for incoming outputs    \\\cline{1-6}
+2210000   &2020-\/10-\/17   &v13   &v0.\+17.\+0.\+0   &v0.\+17.\+3.\+2   &New CLSAG transaction format    \\\cline{1-6}
+2210720   &2020-\/10-\/18   &v14   &v0.\+17.\+1.\+1   &v0.\+17.\+3.\+2   &forbid old MLSAG transaction format    \\\cline{1-6}
+2688888   &2022-\/08-\/13   &v15   &v0.\+18.\+0.\+0   &v0.\+18.\+2.\+2   &ringsize = 16, bulletproofs+, view tags, adjusted dynamic block weight algorithm    \\\cline{1-6}
+2689608   &2022-\/08-\/14   &v16   &v0.\+18.\+0.\+0   &v0.\+18.\+2.\+2   &forbid old v14 transaction format    \\\cline{1-6}
+XXXXXXX   &XXX-\/\+XX-\/\+XX   &XXX   &v\+X.\+XX.\+X.\+X   &v\+X.\+XX.\+X.\+X   &XXX   \\\cline{1-6}
+\end{longtabu}
+
+
+X\textquotesingle{}s indicate that these details have not been determined as of commit date.
+
+
+\begin{DoxyItemize}
+\item indicates estimate as of commit date
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md14}{}\doxysection{Release staging schedule and protocol}\label{md_README_autotoc_md14}
+Approximately three months prior to a scheduled software upgrade, a branch from master will be created with the new release version tag. Pull requests that address bugs should then be made to both master and the new release branch. Pull requests that require extensive review and testing (generally, optimizations and new features) should {\itshape not} be made to the release branch.\hypertarget{md_README_autotoc_md15}{}\doxysection{Compiling Monero from source}\label{md_README_autotoc_md15}
+\hypertarget{md_README_autotoc_md16}{}\doxysubsection{Dependencies}\label{md_README_autotoc_md16}
+The following table summarizes the tools and libraries required to build. A few of the libraries are also included in this repository (marked as \char`\"{}\+Vendored\char`\"{}). By default, the build uses the library installed on the system and ignores the vendored sources. However, if no library is found installed on the system, then the vendored source will be built and used. The vendored sources are also used for statically-\/linked builds because distribution packages often include only shared library binaries ({\ttfamily .so}) but not static library archives ({\ttfamily .a}).
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{9}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Dep   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Min. version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vendored   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Debian/\+Ubuntu pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Arch pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Void pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Fedora pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Optional   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose    }\\\cline{1-9}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Dep   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Min. version   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vendored   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Debian/\+Ubuntu pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Arch pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Void pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Fedora pkg   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Optional   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose    }\\\cline{1-9}
+\endhead
+GCC   &5   &NO   &{\ttfamily build-\/essential}   &{\ttfamily base-\/devel}   &{\ttfamily base-\/devel}   &{\ttfamily gcc}   &NO   &\\\cline{1-9}
+CMake   &3.\+5   &NO   &{\ttfamily cmake}   &{\ttfamily cmake}   &{\ttfamily cmake}   &{\ttfamily cmake}   &NO   &\\\cline{1-9}
+pkg-\/config   &any   &NO   &{\ttfamily pkg-\/config}   &{\ttfamily base-\/devel}   &{\ttfamily base-\/devel}   &{\ttfamily pkgconf}   &NO   &\\\cline{1-9}
+Boost   &1.\+58   &NO   &{\ttfamily libboost-\/all-\/dev}   &{\ttfamily boost}   &{\ttfamily boost-\/devel}   &{\ttfamily boost-\/devel}   &NO   &C++ libraries    \\\cline{1-9}
+Open\+SSL   &basically any   &NO   &{\ttfamily libssl-\/dev}   &{\ttfamily openssl}   &{\ttfamily libressl-\/devel}   &{\ttfamily openssl-\/devel}   &NO   &sha256 sum    \\\cline{1-9}
+libzmq   &4.\+2.\+0   &NO   &{\ttfamily libzmq3-\/dev}   &{\ttfamily zeromq}   &{\ttfamily zeromq-\/devel}   &{\ttfamily zeromq-\/devel}   &NO   &Zero\+MQ library    \\\cline{1-9}
+Open\+PGM   &?   &NO   &{\ttfamily libpgm-\/dev}   &{\ttfamily libpgm}   &&{\ttfamily openpgm-\/devel}   &NO   &For Zero\+MQ    \\\cline{1-9}
+libnorm\mbox{[}2\mbox{]}   &?   &NO   &{\ttfamily libnorm-\/dev}   &&&&YES   &For Zero\+MQ    \\\cline{1-9}
+libunbound   &1.\+4.\+16   &YES   &{\ttfamily libunbound-\/dev}   &{\ttfamily unbound}   &{\ttfamily unbound-\/devel}   &{\ttfamily unbound-\/devel}   &NO   &DNS resolver    \\\cline{1-9}
+libsodium   &?   &NO   &{\ttfamily libsodium-\/dev}   &{\ttfamily libsodium}   &{\ttfamily libsodium-\/devel}   &{\ttfamily libsodium-\/devel}   &NO   &cryptography    \\\cline{1-9}
+libunwind   &any   &NO   &{\ttfamily libunwind8-\/dev}   &{\ttfamily libunwind}   &{\ttfamily libunwind-\/devel}   &{\ttfamily libunwind-\/devel}   &YES   &Stack traces    \\\cline{1-9}
+liblzma   &any   &NO   &{\ttfamily liblzma-\/dev}   &{\ttfamily xz}   &{\ttfamily liblzma-\/devel}   &{\ttfamily xz-\/devel}   &YES   &For libunwind    \\\cline{1-9}
+libreadline   &6.\+3.\+0   &NO   &{\ttfamily libreadline6-\/dev}   &{\ttfamily readline}   &{\ttfamily readline-\/devel}   &{\ttfamily readline-\/devel}   &YES   &Input editing    \\\cline{1-9}
+expat   &1.\+1   &NO   &{\ttfamily libexpat1-\/dev}   &{\ttfamily expat}   &{\ttfamily expat-\/devel}   &{\ttfamily expat-\/devel}   &YES   &XML parsing    \\\cline{1-9}
+GTest   &1.\+5   &YES   &{\ttfamily libgtest-\/dev}\mbox{[}1\mbox{]}   &{\ttfamily gtest}   &{\ttfamily gtest-\/devel}   &{\ttfamily gtest-\/devel}   &YES   &Test suite    \\\cline{1-9}
+ccache   &any   &NO   &{\ttfamily ccache}   &{\ttfamily ccache}   &{\ttfamily ccache}   &{\ttfamily ccache}   &YES   &Compil. cache    \\\cline{1-9}
+Doxygen   &any   &NO   &{\ttfamily doxygen}   &{\ttfamily doxygen}   &{\ttfamily doxygen}   &{\ttfamily doxygen}   &YES   &Documentation    \\\cline{1-9}
+Graphviz   &any   &NO   &{\ttfamily graphviz}   &{\ttfamily graphviz}   &{\ttfamily graphviz}   &{\ttfamily graphviz}   &YES   &Documentation    \\\cline{1-9}
+lrelease   &?   &NO   &{\ttfamily qttools5-\/dev-\/tools}   &{\ttfamily qt5-\/tools}   &{\ttfamily qt5-\/tools}   &{\ttfamily qt5-\/linguist}   &YES   &Translations    \\\cline{1-9}
+libhidapi   &?   &NO   &{\ttfamily libhidapi-\/dev}   &{\ttfamily hidapi}   &{\ttfamily hidapi-\/devel}   &{\ttfamily hidapi-\/devel}   &YES   &Hardware wallet    \\\cline{1-9}
+libusb   &?   &NO   &{\ttfamily libusb-\/1.\+0-\/0-\/dev}   &{\ttfamily libusb}   &{\ttfamily libusb-\/devel}   &{\ttfamily libusbx-\/devel}   &YES   &Hardware wallet    \\\cline{1-9}
+libprotobuf   &?   &NO   &{\ttfamily libprotobuf-\/dev}   &{\ttfamily protobuf}   &{\ttfamily protobuf-\/devel}   &{\ttfamily protobuf-\/devel}   &YES   &Hardware wallet    \\\cline{1-9}
+protoc   &?   &NO   &{\ttfamily protobuf-\/compiler}   &{\ttfamily protobuf}   &{\ttfamily protobuf}   &{\ttfamily protobuf-\/compiler}   &YES   &Hardware wallet    \\\cline{1-9}
+libudev   &?   &NO   &{\ttfamily libudev-\/dev}   &{\ttfamily systemd}   &{\ttfamily eudev-\/libudev-\/devel}   &{\ttfamily systemd-\/devel}   &YES   &Hardware wallet   \\\cline{1-9}
+\end{longtabu}
+
+
+\mbox{[}1\mbox{]} On Debian/\+Ubuntu {\ttfamily libgtest-\/dev} only includes sources and headers. You must build the library binary manually. This can be done with the following command {\ttfamily sudo apt-\/get install libgtest-\/dev \&\& cd /usr/src/gtest \&\& sudo cmake . \&\& sudo make} then\+:
+
+
+\begin{DoxyItemize}
+\item on Debian\+: {\ttfamily sudo mv libg$\ast$ /usr/lib/}
+\item on Ubuntu\+: {\ttfamily sudo mv lib/libg$\ast$ /usr/lib/}
+\end{DoxyItemize}
+
+\mbox{[}2\mbox{]} libnorm-\/dev is needed if your zmq library was built with libnorm, and not needed otherwise
+
+Install all dependencies at once on Debian/\+Ubuntu\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt update \&\& sudo apt install build-\/essential cmake pkg-\/config libssl-\/dev libzmq3-\/dev libunbound-\/dev libsodium-\/dev libunwind8-\/dev liblzma-\/dev libreadline6-\/dev libexpat1-\/dev libpgm-\/dev qttools5-\/dev-\/tools libhidapi-\/dev libusb-\/1.0-\/0-\/dev libprotobuf-\/dev protobuf-\/compiler libudev-\/dev libboost-\/chrono-\/dev libboost-\/date-\/time-\/dev libboost-\/filesystem-\/dev libboost-\/locale-\/dev libboost-\/program-\/options-\/dev libboost-\/regex-\/dev libboost-\/serialization-\/dev libboost-\/system-\/dev libboost-\/thread-\/dev python3 ccache doxygen graphviz}
+
+\end{DoxyCode}
+
+
+Install all dependencies at once on Arch\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo pacman -\/Syu -\/-\/needed base-\/devel cmake boost openssl zeromq libpgm unbound libsodium libunwind xz readline expat gtest python3 ccache doxygen graphviz qt5-\/tools hidapi libusb protobuf systemd}
+
+\end{DoxyCode}
+
+
+Install all dependencies at once on Fedora\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo dnf install gcc gcc-\/c++ cmake pkgconf boost-\/devel openssl-\/devel zeromq-\/devel openpgm-\/devel unbound-\/devel libsodium-\/devel libunwind-\/devel xz-\/devel readline-\/devel expat-\/devel gtest-\/devel ccache doxygen graphviz qt5-\/linguist hidapi-\/devel libusbx-\/devel protobuf-\/devel protobuf-\/compiler systemd-\/devel}
+
+\end{DoxyCode}
+
+
+Install all dependencies at once on open\+SUSE\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo zypper ref \&\& sudo zypper in cppzmq-\/devel libboost\_chrono-\/devel libboost\_date\_time-\/devel libboost\_filesystem-\/devel libboost\_locale-\/devel libboost\_program\_options-\/devel libboost\_regex-\/devel libboost\_serialization-\/devel libboost\_system-\/devel libboost\_thread-\/devel libexpat-\/devel libminiupnpc-\/devel libsodium-\/devel libunwind-\/devel unbound-\/devel cmake doxygen ccache fdupes gcc-\/c++ libevent-\/devel libopenssl-\/devel pkgconf-\/pkg-\/config readline-\/devel xz-\/devel libqt5-\/qttools-\/devel patterns-\/devel-\/C-\/C++-\/devel\_C\_C++}
+
+\end{DoxyCode}
+
+
+Install all dependencies at once on mac\+OS with the provided Brewfile\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{brew update \&\& brew bundle -\/-\/file=contrib/brew/Brewfile}
+
+\end{DoxyCode}
+
+
+Free\+BSD 12.\+1 one-\/liner required to build dependencies\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pkg install git gmake cmake pkgconf boost-\/libs libzmq4 libsodium unbound}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md17}{}\doxysubsection{Cloning the repository}\label{md_README_autotoc_md17}
+Clone recursively to pull-\/in needed submodule(s)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone -\/-\/recursive https://github.com/monero-\/project/monero}
+
+\end{DoxyCode}
+
+
+If you already have a repo cloned, initialize and update\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd monero \&\& git submodule init \&\& git submodule update}
+
+\end{DoxyCode}
+
+
+{\itshape Note}\+: If there are submodule differences between branches, you may need to use {\ttfamily git submodule sync \&\& git submodule update} after changing branches to build successfully.\hypertarget{md_README_autotoc_md18}{}\doxysubsection{Build instructions}\label{md_README_autotoc_md18}
+Monero uses the CMake build system and a top-\/level \mbox{[}Makefile\mbox{]}(Makefile) that invokes cmake commands as needed.\hypertarget{md_README_autotoc_md19}{}\doxysubsubsection{On Linux and mac\+OS}\label{md_README_autotoc_md19}
+
+\begin{DoxyItemize}
+\item Install the dependencies
+\item Change to the root of the source code directory, change to the most recent release branch, and build\+:
+
+\`{}\`{}\`{}bash cd monero git checkout release-\/v0.\+18 make \`{}\`{}\`{}
+
+{\itshape Optional}\+: If your machine has several cores and enough memory, enable parallel build by running {\ttfamily make -\/j$<$number of threads$>$} instead of {\ttfamily make}. For this to be worthwhile, the machine should have one core and about 2GB of RAM available per thread.
+
+{\itshape Note}\+: The instructions above will compile the most stable release of the Monero software. If you would like to use and test the most recent software, use {\ttfamily git checkout master}. The master branch may contain updates that are both unstable and incompatible with release software, though testing is always encouraged.
+\item The resulting executables can be found in {\ttfamily build/release/bin}
+\item Add {\ttfamily PATH=\char`\"{}\$\+PATH\+:\$\+HOME/monero/build/release/bin\char`\"{}} to {\ttfamily .profile}
+\item Run Monero with {\ttfamily monerod -\/-\/detach}
+\item {\bfseries{Optional}}\+: build and run the test suite to verify the binaries\+:
+
+\`{}\`{}\`{}bash make release-\/test \`{}\`{}\`{}
+
+{\itshape NOTE}\+: {\ttfamily core\+\_\+tests} test may take a few hours to complete.
+\item {\bfseries{Optional}}\+: to build binaries suitable for debugging\+:
+
+\`{}\`{}\`{}bash make debug \`{}\`{}\`{}
+\item {\bfseries{Optional}}\+: to build statically-\/linked binaries\+:
+
+\`{}\`{}\`{}bash make release-\/static \`{}\`{}\`{}
+\end{DoxyItemize}
+
+Dependencies need to be built with -\/f\+PIC. Static libraries usually aren\textquotesingle{}t, so you may have to build them yourself with -\/f\+PIC. Refer to their documentation for how to build them.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Optional}}\+: build documentation in {\ttfamily doc/html} (omit {\ttfamily HAVE\+\_\+\+DOT=YES} if {\ttfamily graphviz} is not installed)\+:
+
+\`{}\`{}\`{}bash HAVE\+\_\+\+DOT=YES doxygen Doxyfile \`{}\`{}\`{}
+\item {\bfseries{Optional}}\+: use ccache not to rebuild translation units, that haven\textquotesingle{}t really changed. Monero\textquotesingle{}s CMake\+Lists.\+txt file automatically handles it
+
+\`{}\`{}\`{}bash sudo apt install ccache \`{}\`{}\`{}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md20}{}\doxysubsubsection{On the Raspberry Pi}\label{md_README_autotoc_md20}
+Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (2017-\/09-\/07 or later) from \href{https://www.raspberrypi.org/downloads/raspbian/}{\texttt{ https\+://www.\+raspberrypi.\+org/downloads/raspbian/}}. If you are using Raspian Jessie, \href{\#note-for-raspbian-jessie-users}{\texttt{ please see note in the following section}}.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily apt-\/get update \&\& apt-\/get upgrade} to install all of the latest software
+\item Install the dependencies for Monero from the \textquotesingle{}Debian\textquotesingle{} column in the table above.
+\item Increase the system swap size\+:
+
+\`{}\`{}\`{}bash sudo /etc/init.d/dphys-\/swapfile stop ~\newline
+ sudo nano /etc/dphys-\/swapfile ~\newline
+ CONF\+\_\+\+SWAPSIZE=2048 sudo /etc/init.d/dphys-\/swapfile start \`{}\`{}\`{}
+\item If using an external hard disk without an external power supply, ensure it gets enough power to avoid hardware issues when syncing, by adding the line \char`\"{}max\+\_\+usb\+\_\+current=1\char`\"{} to /boot/config.txt
+\item Clone Monero and checkout the most recent release version\+:
+
+\`{}\`{}\`{}bash git clone \href{https://github.com/monero-project/monero.git}{\texttt{ https\+://github.\+com/monero-\/project/monero.\+git}} cd monero git checkout v0.\+18.\+2.\+2 \`{}\`{}\`{}
+\item Build\+:
+
+\`{}\`{}\`{}bash USE\+\_\+\+SINGLE\+\_\+\+BUILDDIR=1 make release \`{}\`{}\`{}
+\item Wait 4-\/6 hours
+\item The resulting executables can be found in {\ttfamily build/release/bin}
+\item Add {\ttfamily export PATH=\char`\"{}\$\+PATH\+:\$\+HOME/monero/build/release/bin\char`\"{}} to {\ttfamily \$\+HOME/.profile}
+\item Run {\ttfamily source \$\+HOME/.profile}
+\item Run Monero with {\ttfamily monerod -\/-\/detach}
+\item You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md21}{}\doxysubsubsection{$<$em$>$\+Note for Raspbian Jessie users\+:$<$/em$>$}\label{md_README_autotoc_md21}
+If you are using the older Raspbian Jessie image, compiling Monero is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Monero, and thus you must compile a newer version yourself. The following explains the extra steps and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
+
+
+\begin{DoxyItemize}
+\item As before, {\ttfamily apt-\/get update \&\& apt-\/get upgrade} to install all of the latest software, and increase the system swap size
+
+\`{}\`{}\`{}bash sudo /etc/init.d/dphys-\/swapfile stop sudo nano /etc/dphys-\/swapfile CONF\+\_\+\+SWAPSIZE=2048 sudo /etc/init.d/dphys-\/swapfile start \`{}\`{}\`{}
+\item Then, install the dependencies for Monero except for {\ttfamily libunwind} and {\ttfamily libboost-\/all-\/dev}
+\item Install the latest version of boost (this may first require invoking {\ttfamily apt-\/get remove -\/-\/purge libboost$\ast$-\/dev} to remove a previous version if you\textquotesingle{}re not using a clean install)\+:
+
+\`{}\`{}\`{}bash cd wget \href{https://sourceforge.net/projects/boost/files/boost/1.72.0/boost_1_72_0.tar.bz2}{\texttt{ https\+://sourceforge.\+net/projects/boost/files/boost/1.\+72.\+0/boost\+\_\+1\+\_\+72\+\_\+0.\+tar.\+bz2}} tar xvfo boost\+\_\+1\+\_\+72\+\_\+0.\+tar.\+bz2 cd boost\+\_\+1\+\_\+72\+\_\+0 ./bootstrap.sh sudo ./b2 \`{}\`{}\`{}
+\item Wait $\sim$8 hours
+
+\`{}\`{}\`{}bash ~\newline
+ sudo ./bjam cxxflags=-\/f\+PIC cflags=-\/f\+PIC -\/a install \`{}\`{}\`{}
+\item Wait $\sim$4 hours
+\item From here, follow the \href{\#on-the-raspberry-pi}{\texttt{ general Raspberry Pi instructions}} from the \char`\"{}\+Clone Monero and checkout most recent release version\char`\"{} step.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md22}{}\doxysubsubsection{On Windows\+:}\label{md_README_autotoc_md22}
+Binaries for Windows are built on Windows using the Min\+GW toolchain within \href{https://www.msys2.org}{\texttt{ MSYS2 environment}}. The MSYS2 environment emulates a POSIX system. The toolchain runs within the environment and {\itshape cross-\/compiles} binaries that can run outside of the environment as a regular Windows application.
+
+{\bfseries{Preparing the build environment}}
+
+
+\begin{DoxyItemize}
+\item Download and install the \href{https://www.msys2.org}{\texttt{ MSYS2 installer}}, either the 64-\/bit or the 32-\/bit package, depending on your system.
+\item Open the MSYS shell via the {\ttfamily MSYS2 Shell} shortcut
+\item Update packages using pacman\+:
+
+\`{}\`{}\`{}bash pacman -\/Syu \`{}\`{}\`{}
+\item Exit the MSYS shell using Alt+\+F4
+\item Edit the properties for the {\ttfamily MSYS2 Shell} shortcut changing \char`\"{}msys2\+\_\+shell.\+bat\char`\"{} to \char`\"{}msys2\+\_\+shell.\+cmd -\/mingw64\char`\"{} for 64-\/bit builds or \char`\"{}msys2\+\_\+shell.\+cmd -\/mingw32\char`\"{} for 32-\/bit builds
+\item Restart MSYS shell via modified shortcut and update packages again using pacman\+:
+
+\`{}\`{}\`{}bash pacman -\/Syu \`{}\`{}\`{}
+\item Install dependencies\+:
+
+To build for 64-\/bit Windows\+:
+
+\`{}\`{}\`{}bash pacman -\/S mingw-\/w64-\/x86\+\_\+64-\/toolchain make mingw-\/w64-\/x86\+\_\+64-\/cmake mingw-\/w64-\/x86\+\_\+64-\/boost mingw-\/w64-\/x86\+\_\+64-\/openssl mingw-\/w64-\/x86\+\_\+64-\/zeromq mingw-\/w64-\/x86\+\_\+64-\/libsodium mingw-\/w64-\/x86\+\_\+64-\/hidapi mingw-\/w64-\/x86\+\_\+64-\/unbound \`{}\`{}\`{}
+
+To build for 32-\/bit Windows\+:
+
+\`{}\`{}\`{}bash pacman -\/S mingw-\/w64-\/i686-\/toolchain make mingw-\/w64-\/i686-\/cmake mingw-\/w64-\/i686-\/boost mingw-\/w64-\/i686-\/openssl mingw-\/w64-\/i686-\/zeromq mingw-\/w64-\/i686-\/libsodium mingw-\/w64-\/i686-\/hidapi mingw-\/w64-\/i686-\/unbound \`{}\`{}\`{}
+\item Open the MingW shell via {\ttfamily Min\+GW-\/w64-\/\+Win64 Shell} shortcut on 64-\/bit Windows or {\ttfamily Min\+GW-\/w64-\/\+Win64 Shell} shortcut on 32-\/bit Windows. Note that if you are running 64-\/bit Windows, you will have both 64-\/bit and 32-\/bit Min\+GW shells.
+\end{DoxyItemize}
+
+{\bfseries{Cloning}}
+
+
+\begin{DoxyItemize}
+\item To git clone, run\+:
+
+\`{}\`{}\`{}bash git clone --recursive \href{https://github.com/monero-project/monero.git}{\texttt{ https\+://github.\+com/monero-\/project/monero.\+git}} \`{}\`{}\`{}
+\end{DoxyItemize}
+
+{\bfseries{Building}}
+
+
+\begin{DoxyItemize}
+\item Change to the cloned directory, run\+:
+
+\`{}\`{}\`{}bash cd monero \`{}\`{}\`{}
+\item If you would like a specific \href{https://github.com/monero-project/monero/tags}{\texttt{ version/tag}}, do a git checkout for that version. eg. \textquotesingle{}v0.\+18.\+2.\+2\textquotesingle{}. If you don\textquotesingle{}t care about the version and just want binaries from master, skip this step\+:
+
+\`{}\`{}\`{}bash git checkout v0.\+18.\+2.\+2 \`{}\`{}\`{}
+\item If you are on a 64-\/bit system, run\+:
+
+\`{}\`{}\`{}bash make release-\/static-\/win64 \`{}\`{}\`{}
+\item If you are on a 32-\/bit system, run\+:
+
+\`{}\`{}\`{}bash make release-\/static-\/win32 \`{}\`{}\`{}
+\item The resulting executables can be found in {\ttfamily build/release/bin}
+\item {\bfseries{Optional}}\+: to build Windows binaries suitable for debugging on a 64-\/bit system, run\+:
+
+\`{}\`{}\`{}bash make debug-\/static-\/win64 \`{}\`{}\`{}
+\item {\bfseries{Optional}}\+: to build Windows binaries suitable for debugging on a 32-\/bit system, run\+:
+
+\`{}\`{}\`{}bash make debug-\/static-\/win32 \`{}\`{}\`{}
+\item The resulting executables can be found in {\ttfamily build/debug/bin}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md23}{}\doxysubsection{On Free\+BSD\+:}\label{md_README_autotoc_md23}
+The project can be built from scratch by following instructions for Linux above(but use {\ttfamily gmake} instead of {\ttfamily make}). If you are running Monero in a jail, you need to add {\ttfamily sysvsem=\char`\"{}new\char`\"{}} to your jail configuration, otherwise lmdb will throw the error message\+: {\ttfamily Failed to open lmdb environment\+: Function not implemented}.
+
+Monero is also available as a port or package as {\ttfamily monero-\/cli}.\hypertarget{md_README_autotoc_md24}{}\doxysubsection{On Open\+BSD\+:}\label{md_README_autotoc_md24}
+You will need to add a few packages to your system. {\ttfamily pkg\+\_\+add cmake gmake zeromq libiconv boost}.
+
+The {\ttfamily doxygen} and {\ttfamily graphviz} packages are optional and require the xbase set. Running the test suite also requires {\ttfamily py-\/requests} package.
+
+Build monero\+: {\ttfamily env DEVELOPER\+\_\+\+LOCAL\+\_\+\+TOOLS=1 BOOST\+\_\+\+ROOT=/usr/local gmake release-\/static}
+
+Note\+: you may encounter the following error when compiling the latest version of Monero as a normal user\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LLVM ERROR: out of memory}
+\DoxyCodeLine{c++: error: unable to execute command: Abort trap (core dumped)}
+
+\end{DoxyCode}
+
+
+Then you need to increase the data ulimit size to 2GB and try again\+: {\ttfamily ulimit -\/d 2000000}\hypertarget{md_README_autotoc_md25}{}\doxysubsection{On Net\+BSD\+:}\label{md_README_autotoc_md25}
+Check that the dependencies are present\+: {\ttfamily pkg\+\_\+info -\/c libexecinfo boost-\/headers boost-\/libs protobuf readline libusb1 zeromq git-\/base pkgconf gmake cmake $\vert$ more}, and install any that are reported missing, using {\ttfamily pkg\+\_\+add} or from your pkgsrc tree. Readline is optional but worth having.
+
+Third-\/party dependencies are usually under {\ttfamily /usr/pkg/}, but if you have a custom setup, adjust the \char`\"{}/usr/pkg\char`\"{} (below) accordingly.
+
+Clone the monero repository recursively and checkout the most recent release as described above. Then build monero\+: {\ttfamily gmake BOOST\+\_\+\+ROOT=/usr/pkg LDFLAGS=\char`\"{}-\/\+Wl,-\/\+R/usr/pkg/lib\char`\"{} release}. The resulting executables can be found in {\ttfamily build/\+Net\+BSD/\mbox{[}Release version\mbox{]}/\+Release/bin/}.\hypertarget{md_README_autotoc_md26}{}\doxysubsection{On Solaris\+:}\label{md_README_autotoc_md26}
+The default Solaris linker can\textquotesingle{}t be used, you have to install GNU ld, then run cmake manually with the path to your copy of GNU ld\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir -\/p build/release}
+\DoxyCodeLine{cd build/release}
+\DoxyCodeLine{cmake -\/DCMAKE\_LINKER=/path/to/ld -\/D CMAKE\_BUILD\_TYPE=Release ../..}
+\DoxyCodeLine{cd ../..}
+
+\end{DoxyCode}
+
+
+Then you can run make as usual.\hypertarget{md_README_autotoc_md27}{}\doxysubsection{Building portable statically linked binaries}\label{md_README_autotoc_md27}
+By default, in either dynamically or statically linked builds, binaries target the specific host processor on which the build happens and are not portable to other processors. Portable binaries can be built using the following targets\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily make release-\/static-\/linux-\/x86\+\_\+64} builds binaries on Linux on x86\+\_\+64 portable across POSIX systems on x86\+\_\+64 processors
+\item {\ttfamily make release-\/static-\/linux-\/i686} builds binaries on Linux on x86\+\_\+64 or i686 portable across POSIX systems on i686 processors
+\item {\ttfamily make release-\/static-\/linux-\/armv8} builds binaries on Linux portable across POSIX systems on armv8 processors
+\item {\ttfamily make release-\/static-\/linux-\/armv7} builds binaries on Linux portable across POSIX systems on armv7 processors
+\item {\ttfamily make release-\/static-\/linux-\/armv6} builds binaries on Linux portable across POSIX systems on armv6 processors
+\item {\ttfamily make release-\/static-\/win64} builds binaries on 64-\/bit Windows portable across 64-\/bit Windows systems
+\item {\ttfamily make release-\/static-\/win32} builds binaries on 64-\/bit or 32-\/bit Windows portable across 32-\/bit Windows systems
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md28}{}\doxysubsection{Cross Compiling}\label{md_README_autotoc_md28}
+You can also cross-\/compile static binaries on Linux for Windows and mac\+OS with the {\ttfamily depends} system.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily make depends target=x86\+\_\+64-\/linux-\/gnu} for 64-\/bit linux binaries.
+\item {\ttfamily make depends target=x86\+\_\+64-\/w64-\/mingw32} for 64-\/bit windows binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily python3 g++-\/mingw-\/w64-\/x86-\/64 wine1.\+6 bc}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=x86\+\_\+64-\/apple-\/darwin11} for mac\+OS binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily cmake imagemagick libcap-\/dev librsvg2-\/bin libz-\/dev libbz2-\/dev libtiff-\/tools python-\/dev}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=i686-\/linux-\/gnu} for 32-\/bit linux binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily g++-\/multilib bc}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=i686-\/w64-\/mingw32} for 32-\/bit windows binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily python3 g++-\/mingw-\/w64-\/i686}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=arm-\/linux-\/gnueabihf} for armv7 binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily g++-\/arm-\/linux-\/gnueabihf}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=aarch64-\/linux-\/gnu} for armv8 binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily g++-\/aarch64-\/linux-\/gnu}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=riscv64-\/linux-\/gnu} for RISC V 64 bit binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily g++-\/riscv64-\/linux-\/gnu}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=x86\+\_\+64-\/unknown-\/freebsd} for freebsd binaries.
+\begin{DoxyItemize}
+\item Requires\+: {\ttfamily clang-\/8}
+\end{DoxyItemize}
+\item {\ttfamily make depends target=arm-\/linux-\/android} for 32bit android binaries
+\item {\ttfamily make depends target=aarch64-\/linux-\/android} for 64bit android binaries
+\end{DoxyItemize}
+
+The required packages are the names for each toolchain on apt. Depending on your distro, they may have different names. The {\ttfamily depends} system has been tested on Ubuntu 18.\+04 and 20.\+04.
+
+Using {\ttfamily depends} might also be easier to compile Monero on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distro (for example Ubuntu), install the apt build-\/essentials and follow the {\ttfamily depends} steps as depicted above.
+
+The produced binaries still link libc dynamically. If the binary is compiled on a current distribution, it might not run on an older distribution with an older installation of libc. Passing {\ttfamily -\/DBACKCOMPAT=ON} to cmake will make sure that the binary will run on systems having at least libc version 2.\+17.\hypertarget{md_README_autotoc_md29}{}\doxysection{Installing Monero from a package}\label{md_README_autotoc_md29}
+{\bfseries{DISCLAIMER\+: These packages are not part of this repository or maintained by this project\textquotesingle{}s contributors, and as such, do not go through the same review process to ensure their trustworthiness and security.}}
+
+Packages are available for
+
+
+\begin{DoxyItemize}
+\item Debian Buster
+
+See the \href{https://gitlab.com/whonix/monero-gui\#how-to-install-monero-using-apt-get}{\texttt{ instructions in the whonix/monero-\/gui repository}}
+\item Debian Bullseye and Sid
+
+\`{}\`{}\`{}bash sudo apt install monero \`{}\`{}\`{} More info and versions in the \href{https://tracker.debian.org/pkg/monero}{\texttt{ Debian package tracker}}.
+\item Arch Linux \href{https://www.archlinux.org/packages/community/x86_64/monero/}{\texttt{ (via Community packages)}}\+:
+
+\`{}\`{}\`{}bash sudo pacman -\/S monero \`{}\`{}\`{}
+\item Void Linux\+:
+
+\`{}\`{}\`{}bash xbps-\/install -\/S monero \`{}\`{}\`{}
+\item Guix\+SD
+
+\`{}\`{}\`{}bash guix package -\/i monero \`{}\`{}\`{}
+\item Gentoo \href{https://github.com/gentoo-monero/gentoo-monero}{\texttt{ Monero overlay}}
+
+\`{}\`{}\`{}bash emerge --noreplace eselect-\/repository eselect repository enable monero emaint sync -\/r monero echo \textquotesingle{}$\ast$/$\ast$\+::monero $\sim$amd64\textquotesingle{} $>$$>$ /etc/portage/package.accept\+\_\+keywords emerge net-\/p2p/monero \`{}\`{}\`{}
+\item mac\+OS \href{https://brew.sh/}{\texttt{ (homebrew)}} \`{}\`{}\`{}bash brew install monero \`{}\`{}\`{}
+\item Docker
+
+\`{}\`{}\`{}bash 
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md30}{}\doxysection{Build using all available cores}\label{md_README_autotoc_md30}
+docker build -\/t monero .\hypertarget{md_README_autotoc_md31}{}\doxysection{or build using a specific number of cores (reduce RAM requirement)}\label{md_README_autotoc_md31}
+docker build --build-\/arg NPROC=1 -\/t monero .\hypertarget{md_README_autotoc_md32}{}\doxysection{either run in foreground}\label{md_README_autotoc_md32}
+docker run -\/it -\/v /monero/chain\+:/home/monero/.bitmonero -\/v /monero/wallet\+:/wallet -\/p 18080\+:18080 monero\hypertarget{md_README_autotoc_md33}{}\doxysection{or in background}\label{md_README_autotoc_md33}
+docker run -\/it -\/d -\/v /monero/chain\+:/home/monero/.bitmonero -\/v /monero/wallet\+:/wallet -\/p 18080\+:18080 monero \`{}\`{}\`{}
+
+
+\begin{DoxyItemize}
+\item The build needs 3 GB space.
+\item Wait one hour or more
+\end{DoxyItemize}
+
+Packaging for your favorite distribution would be a welcome contribution!\hypertarget{md_README_autotoc_md34}{}\doxysubsection{Running monerod}\label{md_README_autotoc_md34}
+The build places the binary in {\ttfamily bin/} sub-\/directory within the build directory from which cmake was invoked (repository root by default). To run in the foreground\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/monerod}
+
+\end{DoxyCode}
+
+
+To list all available options, run {\ttfamily ./bin/monerod -\/-\/help}. Options can be specified either on the command line or in a configuration file passed by the {\ttfamily -\/-\/config-\/file} argument. To specify an option in the configuration file, add a line with the syntax {\ttfamily argumentname=value}, where {\ttfamily argumentname} is the name of the argument without the leading dashes, for example, {\ttfamily log-\/level=1}.
+
+To run in background\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/monerod -\/-\/log-\/file monerod.log -\/-\/detach}
+
+\end{DoxyCode}
+
+
+To run as a systemd service, copy \href{utils/systemd/monerod.service}{\texttt{ monerod.\+service}} to {\ttfamily /etc/systemd/system/} and \href{utils/conf/monerod.conf}{\texttt{ monerod.\+conf}} to {\ttfamily /etc/}. The \href{utils/systemd/monerod.service}{\texttt{ example service}} assumes that the user {\ttfamily monero} exists and its home is the data directory specified in the \href{utils/conf/monerod.conf}{\texttt{ example config}}.
+
+If you\textquotesingle{}re on Mac, you may need to add the {\ttfamily -\/-\/max-\/concurrency 1} option to monero-\/wallet-\/cli, and possibly monerod, if you get crashes refreshing.\hypertarget{md_README_autotoc_md35}{}\doxysubsection{Internationalization}\label{md_README_autotoc_md35}
+See README.i18n.md.\hypertarget{md_README_autotoc_md36}{}\doxysubsection{Using Tor}\label{md_README_autotoc_md36}
+\begin{quote}
+There is a new, still experimental, integration with Tor. The feature allows connecting over IPv4 and Tor simultaneously -\/ IPv4 is used for relaying blocks and relaying transactions received by peers whereas Tor is used solely for relaying transactions received over local RPC. This provides privacy and better protection against surrounding node (sybil) attacks. \end{quote}
+While Monero isn\textquotesingle{}t made to integrate with Tor, it can be used wrapped with torsocks, by setting the following configuration parameters and environment variables\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/-\/p2p-\/bind-\/ip 127.\+0.\+0.\+1} on the command line or {\ttfamily p2p-\/bind-\/ip=127.\+0.\+0.\+1} in monerod.\+conf to disable listening for connections on external interfaces.
+\item {\ttfamily -\/-\/no-\/igd} on the command line or {\ttfamily no-\/igd=1} in monerod.\+conf to disable IGD (UPnP port forwarding negotiation), which is pointless with Tor.
+\item {\ttfamily DNS\+\_\+\+PUBLIC=tcp} or {\ttfamily DNS\+\_\+\+PUBLIC=tcp\+://x.x.\+x.\+x} where x.\+x.\+x.\+x is the IP of the desired DNS server, for DNS requests to go over TCP, so that they are routed through Tor. When IP is not specified, monerod uses the default list of servers defined in \href{src/common/dns_utils.cpp}{\texttt{ src/common/dns\+\_\+utils.\+cpp}}.
+\item {\ttfamily TORSOCKS\+\_\+\+ALLOW\+\_\+\+INBOUND=1} to tell torsocks to allow monerod to bind to interfaces to accept connections from the wallet. On some Linux systems, torsocks allows binding to localhost by default, so setting this variable is only necessary to allow binding to local LAN/\+VPN interfaces to allow wallets to connect from remote hosts. On other systems, it may be needed for local wallets as well.
+\item Do NOT pass {\ttfamily -\/-\/detach} when running through torsocks with systemd, (see \href{utils/systemd/monerod.service}{\texttt{ utils/systemd/monerod.\+service}} for details).
+\item If you use the wallet with a Tor daemon via the loopback IP (eg, 127.\+0.\+0.\+1\+:9050), then use {\ttfamily -\/-\/untrusted-\/daemon} unless it is your own hidden service.
+\end{DoxyItemize}
+
+Example command line to start monerod through Tor\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{DNS\_PUBLIC=tcp torsocks monerod -\/-\/p2p-\/bind-\/ip 127.0.0.1 -\/-\/no-\/igd}
+
+\end{DoxyCode}
+
+
+A helper script is in contrib/tor/monero-\/over-\/tor.\+sh. It assumes Tor is installed already, and runs Tor and Monero with the right configuration.\hypertarget{md_README_autotoc_md37}{}\doxysubsubsection{Using Tor on Tails}\label{md_README_autotoc_md37}
+TAILS ships with a very restrictive set of firewall rules. Therefore, you need to add a rule to allow this connection too, in addition to telling torsocks to allow inbound connections. Full example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo iptables -\/I OUTPUT 2 -\/p tcp -\/d 127.0.0.1 -\/m tcp -\/-\/dport 18081 -\/j ACCEPT}
+\DoxyCodeLine{DNS\_PUBLIC=tcp torsocks ./monerod -\/-\/p2p-\/bind-\/ip 127.0.0.1 -\/-\/no-\/igd -\/-\/rpc-\/bind-\/ip 127.0.0.1 \(\backslash\)}
+\DoxyCodeLine{    -\/-\/data-\/dir /home/amnesia/Persistent/your/directory/to/the/blockchain}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md38}{}\doxysubsection{Pruning}\label{md_README_autotoc_md38}
+As of April 2022, the full Monero blockchain file is about 130 GB. One can store a pruned blockchain, which is about 45 GB. A pruned blockchain can only serve part of the historical chain data to other peers, but is otherwise identical in functionality to the full blockchain. To use a pruned blockchain, it is best to start the initial sync with {\ttfamily -\/-\/prune-\/blockchain}. However, it is also possible to prune an existing blockchain using the {\ttfamily monero-\/blockchain-\/prune} tool or using the {\ttfamily -\/-\/prune-\/blockchain} {\ttfamily monerod} option with an existing chain. If an existing chain exists, pruning will temporarily require disk space to store both the full and pruned blockchains.
+
+For more detailed information see the \href{https://www.getmonero.org/resources/moneropedia/pruning.html}{\texttt{ \textquotesingle{}Pruning\textquotesingle{} entry in the Moneropedia}}\hypertarget{md_README_autotoc_md39}{}\doxysubsection{Debugging}\label{md_README_autotoc_md39}
+This section contains general instructions for debugging failed installs or problems encountered with Monero. First, ensure you are running the latest version built from the Git\+Hub repo.\hypertarget{md_README_autotoc_md40}{}\doxysubsubsection{Obtaining stack traces and core dumps on Unix systems}\label{md_README_autotoc_md40}
+We generally use the tool {\ttfamily gdb} (GNU debugger) to provide stack trace functionality, and {\ttfamily ulimit} to provide core dumps in builds which crash or segfault.
+
+
+\begin{DoxyItemize}
+\item To use {\ttfamily gdb} in order to obtain a stack trace for a build that has stalled\+:
+\end{DoxyItemize}
+
+Run the build.
+
+Once it stalls, enter the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gdb /path/to/monerod `pidof monerod`}
+
+\end{DoxyCode}
+
+
+Type {\ttfamily thread apply all bt} within gdb in order to obtain the stack trace
+
+
+\begin{DoxyItemize}
+\item If however the core dumps or segfaults\+:
+\end{DoxyItemize}
+
+Enter {\ttfamily ulimit -\/c unlimited} on the command line to enable unlimited filesizes for core dumps
+
+Enter {\ttfamily echo core $\vert$ sudo tee /proc/sys/kernel/core\+\_\+pattern} to stop cores from being hijacked by other tools
+
+Run the build.
+
+When it terminates with an output along the lines of \char`\"{}\+Segmentation fault (core dumped)\char`\"{}, there should be a core dump file in the same directory as monerod. It may be named just {\ttfamily core}, or {\ttfamily core.\+xxxx} with numbers appended.
+
+You can now analyse this core dump with {\ttfamily gdb} as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gdb /path/to/monerod /path/to/dumpfile`}
+
+\end{DoxyCode}
+
+
+Print the stack trace with {\ttfamily bt}
+
+
+\begin{DoxyItemize}
+\item If a program crashed and cores are managed by systemd, the following can also get a stack trace for that crash\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{coredumpctl -\/1 gdb}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md41}{}\doxyparagraph{To run Monero within gdb\+:}\label{md_README_autotoc_md41}
+Type {\ttfamily gdb /path/to/monerod}
+
+Pass command-\/line options with {\ttfamily -\/-\/args} followed by the relevant arguments
+
+Type {\ttfamily run} to run monerod\hypertarget{md_README_autotoc_md42}{}\doxysubsubsection{Analysing memory corruption}\label{md_README_autotoc_md42}
+There are two tools available\+:\hypertarget{md_README_autotoc_md43}{}\doxyparagraph{ASAN}\label{md_README_autotoc_md43}
+Configure Monero with the -\/D SANITIZE=ON cmake flag, eg\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd build/debug \&\& cmake -\/D SANITIZE=ON -\/D CMAKE\_BUILD\_TYPE=Debug ../..}
+
+\end{DoxyCode}
+
+
+You can then run the monero tools normally. Performance will typically halve.\hypertarget{md_README_autotoc_md44}{}\doxyparagraph{valgrind}\label{md_README_autotoc_md44}
+Install valgrind and run as {\ttfamily valgrind /path/to/monerod}. It will be very slow.\hypertarget{md_README_autotoc_md45}{}\doxysubsubsection{LMDB}\label{md_README_autotoc_md45}
+Instructions for debugging suspected blockchain corruption as per @\+HYC
+
+There is an {\ttfamily mdb\+\_\+stat} command in the LMDB source that can print statistics about the database but it\textquotesingle{}s not routinely built. This can be built with the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/monero/external/db\_drivers/liblmdb \&\& make}
+
+\end{DoxyCode}
+
+
+The output of {\ttfamily mdb\+\_\+stat -\/ea $<$path to blockchain dir$>$} will indicate inconsistencies in the blocks, block\+\_\+heights and block\+\_\+info table.
+
+The output of {\ttfamily mdb\+\_\+dump -\/s blocks $<$path to blockchain dir$>$} and {\ttfamily mdb\+\_\+dump -\/s block\+\_\+info $<$path to blockchain dir$>$} is useful for indicating whether blocks and block\+\_\+info contain the same keys.
+
+These records are dumped as hex data, where the first line is the key and the second line is the data.\hypertarget{md_README_autotoc_md46}{}\doxysection{Known Issues}\label{md_README_autotoc_md46}
+\hypertarget{md_README_autotoc_md47}{}\doxysubsection{Protocols}\label{md_README_autotoc_md47}
+\hypertarget{md_README_autotoc_md48}{}\doxysubsubsection{Socket-\/based}\label{md_README_autotoc_md48}
+Because of the nature of the socket-\/based protocols that drive monero, certain protocol weaknesses are somewhat unavoidable at this time. While these weaknesses can theoretically be fully mitigated, the effort required (the means) may not justify the ends. As such, please consider taking the following precautions if you are a monero node operator\+:
+
+
+\begin{DoxyItemize}
+\item Run {\ttfamily monerod} on a \char`\"{}secured\char`\"{} machine. If operational security is not your forte, at a very minimum, have a dedicated a computer running {\ttfamily monerod} and {\bfseries{do not}} browse the web, use email clients, or use any other potentially harmful apps on your {\ttfamily monerod} machine. {\bfseries{Do not click links or load URL/\+MUA content on the same machine}}. Doing so may potentially exploit weaknesses in commands which accept \char`\"{}localhost\char`\"{} and \char`\"{}127.\+0.\+0.\+1\char`\"{}.
+\item If you plan on hosting a public \char`\"{}remote\char`\"{} node, start {\ttfamily monerod} with {\ttfamily -\/-\/restricted-\/rpc}. This is a must.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md49}{}\doxysubsubsection{Blockchain-\/based}\label{md_README_autotoc_md49}
+Certain blockchain \char`\"{}features\char`\"{} can be considered \char`\"{}bugs\char`\"{} if misused correctly. Consequently, please consider the following\+:
+
+
+\begin{DoxyItemize}
+\item When receiving monero, be aware that it may be locked for an arbitrary time if the sender elected to, preventing you from spending that monero until the lock time expires. You may want to hold off acting upon such a transaction until the unlock time lapses. To get a sense of that time, you can consider the remaining blocktime until unlock as seen in the {\ttfamily show\+\_\+transfers} command. 
+\end{DoxyItemize}
